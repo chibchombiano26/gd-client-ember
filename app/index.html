@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GeekTest</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{content-for "head"}}
+
+    <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+    <link rel="stylesheet" href="{{rootURL}}assets/geek-test.css">
+
+    {{content-for "head-footer"}}
+  </head>
+  <body>
+    {{content-for "body"}}
+
+    <script src="{{rootURL}}assets/vendor.js"></script>
+    <script src="{{rootURL}}assets/geek-test.js"></script>
+
+    {{content-for "body-footer"}}
+    
+    
+    <!-- Vendors -->
+    <script src="//cdn.auth0.com/js/lock/10.0.0/lock.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/gifshot/0.3.2/gifshot.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jspdf/1.2.61/jspdf.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/push.js/0.0.11/push.min.js"></script>
+    
+    <script type="text/javascript">
+       
+       var horizon = Horizon({ host: 'geek-developers-server.7c5d756b.svc.dockerapp.io:8081'});    
+        horizon.onReady(function() {
+          console.log("Horizon ready");
+        });
+       horizon.connect();     
+       
+    </script>
+    
+  </body>
+</html>

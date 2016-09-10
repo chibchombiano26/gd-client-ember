@@ -1,0 +1,12 @@
+{
+  "name": "geek-test",
+  "dependencies": {
+    "ember": "~2.7.0",
+    "ember-cli-shims": "0.1.1",
+    "ember-qunit-notifications": "0.1.0",
+    "bootstrap": "~3.3.5",
+    "ember-simple-auth": "0.8.0",
+    "auth0-lock": "8.3.0",
+    "jsrsasign": "4.9.1"
+  }
+}

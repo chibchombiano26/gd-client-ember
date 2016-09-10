@@ -1,0 +1,10 @@
+{{yield}}
+
+<ul>
+  {{#each images key="id" as |image|}}
+    <li>
+        <img src={{image.url}} />
+    </li>
+  {{/each}}
+</ul>
+

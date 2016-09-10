@@ -1,0 +1,10 @@
+{{user-info}}
+
+<header>
+  {{#if session.isAuthenticated}}
+    <h3>You are currently logged as: {{session.data.authenticated.profile.email}}</h3>
+    <a href="#" {{action 'logout'}}>Logout</a>
+  {{/if}}
+</header>
+
+{{outlet}}
