@@ -13,11 +13,13 @@ export default Ember.Component.extend({
     let input = this.$()[0];
 
     input.onchange = (event) => {
-        
+      
+      let destination = this.get('destination') || 'Images';
       let files = event.target.files;
       this.get('uploadService').uploadFile(URLUPLOAD, [], files).then((e)=>{
-          horizon("Images").store({url: e.response, date : new Date()});
+          horizon(destination).store({url: e.response, date : new Date()});
       })
+      
     };
   })
 });

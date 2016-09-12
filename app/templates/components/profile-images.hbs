@@ -1,0 +1,16 @@
+{{yield}}
+
+
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+  <div class="card">
+  <div class="row">
+      {{#each images key="id" as |image|}}
+        <div class="col-md-4">
+          <a href="{{image.url}}" class="thumbnail"> 
+            <img src={{image.url}} style="width:150px;height:150px" />
+          </a>
+        </div>
+      {{/each}}
+  </div>
+  </div>
+</div>

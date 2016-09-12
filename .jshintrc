@@ -2,7 +2,11 @@
   "predef": [
     "document",
     "window",
-    "-Promise"
+    "-Promise",
+    "Auth0Lock",
+    "Auth0",
+    "horizon",
+    "Promise"
   ],
   "browser": true,
   "boss": true,
@@ -28,6 +32,6 @@
   "white": false,
   "eqnull": true,
   "esversion": 6,
-  "unused": true,
+  "unused": false,
   "asi": true
 }

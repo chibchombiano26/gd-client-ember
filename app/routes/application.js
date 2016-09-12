@@ -7,13 +7,11 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
   auth: Ember.inject.service('auth'),
   pushService : Ember.inject.service('push'),
   
-  
   init(){
-    
-    
+    let result = null;
     let auth = this.get("auth");
     if(auth && auth.auth0){
-      var result = auth.auth0.parseHash(window.location.hash);
+      result = auth.auth0.parseHash(window.location.hash);
     }
     
     if (result && result.idToken) {
@@ -25,11 +23,16 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
     this.onNewImage();
   },
   onNewImage(){
-    
+    //Prevent initial event
+    //Emulate prevent.default() event 
+    let initial = true;
     horizon("Images")
       .order("date", "descending")
       .limit(1).watch().subscribe(images => {
-          this.get('pushService').showPush("Hey !!", "A new image is here", images[0].url);
+          if(!initial){
+            this.get('pushService').showPush("Hey !!", "A new image is here", images[0].url);
+          }
+          initial = false;
       });
   },
   actions: {

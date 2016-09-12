@@ -13,7 +13,8 @@ export default Ember.Component.extend({
         
         let _canvas = this.canvas;
         let that = this;
-        gifshot.takeSnapShot({text: '#GeekDevelopers'}, function (obj) {            
+        gifshot.takeSnapShot({text: '#GeekDevelopers'}, function (obj) {
+            console.log(obj);
             if (!obj.error) {
                 
                 let img = new Image();
@@ -58,7 +59,7 @@ export default Ember.Component.extend({
 
             // apply noise
             if (noise > 0) {
-                var noise = Math.round(noise - Math.random() * noise);
+                noise = Math.round(noise - Math.random() * noise);
 
                 for (var j = 0; j < 3; j++) {
                     var iPN = noise + imageData.data[i + j];

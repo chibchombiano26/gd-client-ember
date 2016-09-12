@@ -1,8 +1,9 @@
+/*global Auth0Lock, Auth0*/
 import Ember from 'ember';
 
 export default Ember.Service.extend({
-    lock : new Object(),
-    auth : new Object(),
+    lock : {},
+    auth : {},
     init(){
       this.lock = new Auth0Lock('vDqN9QLHGSQMmf0LhrK6PvL0NmTKKixP', 'hefesoftsas.auth0.com', {
           theme: {

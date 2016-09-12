@@ -3,10 +3,7 @@ import Ember from 'ember';
 
 export default Ember.Service.extend({
     
-    log(text){
-      console.log(text);
-    },
-    
+  
     uploadFile(url, params, files){
          return new Promise((resolve, reject) => {
             
