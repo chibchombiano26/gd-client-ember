@@ -16,7 +16,7 @@ export default Ember.Component.extend({
         
       let files = event.target.files;
       this.get('uploadService').uploadFile(URLUPLOAD, [], files).then((e)=>{
-          horizon("Images").store({url: e.response});
+          horizon("Images").store({url: e.response, date : new Date()});
       })
     };
   })

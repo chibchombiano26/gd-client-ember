@@ -11,6 +11,9 @@ Router.map(function() {
   this.route('protected');
   this.route('login');
   this.route('home');
+  this.route('camera');
+  this.route('media');
+  this.route('user-profile');
 });
 
 export default Router;

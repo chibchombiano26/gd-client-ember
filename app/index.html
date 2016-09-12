@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
   <head>
     <meta charset="utf-8">
@@ -36,6 +36,12 @@
           console.log("Horizon ready");
         });
        horizon.connect();     
+       
+       $(document).ready(function(){
+         $('[data-toggle="offcanvas"]').click(function(){
+           $('#side-menu').toggleClass('hidden-xs');
+         })
+       })
        
     </script>
     

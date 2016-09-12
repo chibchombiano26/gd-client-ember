@@ -24,6 +24,8 @@ module.exports = function(defaults) {
   
   app.import(app.bowerDirectory + '/auth0-lock/build/auth0-lock.js');
   app.import(app.bowerDirectory + '/jsrsasign/jsrsasign-latest-all-min.js');
+  app.import(app.bowerDirectory + '/gifshot/build/gifshot.min.js');
+  app.import(app.bowerDirectory + '/push.js/push.min.js');
   
   return app.toTree();
 };

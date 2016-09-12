@@ -1,0 +1,25 @@
+{{yield}}
+
+<div class="container">
+    <div class="widget">
+        
+        
+        
+        <span class="input-group-btn">
+            <button type="button" {{action "takeSnapShot"}} class="btn btn-large btn-block btn-info">Take Snapshot</button>
+        </span>
+        
+
+        
+        <canvas id="canvas" class="gdCanvas" width="480" height="320"></canvas>
+
+        
+        <span class="input-group-btn">
+            <button type="button" {{action "grayScale"}} class="btn btn-default">Gray Scale</button>
+            <button type="button" {{action "sepia"}} class="btn btn-default">Sepia</button>
+        </span>
+        
+        
+
+    </div>
+</div>

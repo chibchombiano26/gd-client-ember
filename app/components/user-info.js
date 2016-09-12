@@ -9,6 +9,7 @@ export default Ember.Component.extend({
         if(token){
           this.get("auth").getProfile(token).then((info)=>{
             this.set('info', info);
+            this.get('localStorage').setObject('userInfo', info);
           })
         }
     }

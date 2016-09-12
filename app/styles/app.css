@@ -1,0 +1,121 @@
+html, body{
+    font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f3f3f4;
+    color: #676a6c;
+    height: 100%;
+}
+
+#side-menu{
+    background-color: #2f4050;
+    padding: 0px;
+}
+
+#side-menu h1{
+    color: #fff;
+    text-align: center;
+    margin: 10px 0px;
+    font-size: 25px;
+}
+
+.display-table{
+    display: table;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+}
+
+.display-table-row{
+    display: table-row;
+    height: 100%;
+}
+
+.display-table-cell{
+    display: table-cell;
+    float: none;
+    height: 100%;
+}
+
+.valign-top{
+  vertical-align: top;  
+}
+
+#side-menu ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+#side-menu a{
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #9fb1c2;
+    font-weight: bold;
+    font-size: 13px;
+    display: block;
+}
+
+#side-menu a:hover{
+    background-color: #293846;
+    color: #fff;
+    display: block;
+}
+
+#side-menu .glyphicon{
+    margin-right: 6px;
+}
+
+#nav-header{
+    background-color: #fff;
+    border-bottom: 1px solid #e7eaec;
+}
+
+#nav-header ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    color: #676a6c;
+}
+
+#nav-header ul li{
+    float: left;
+    margin-left: 15px;
+    padding: 17px 0px;
+}
+
+#nav-header ul .glyphicon{
+    color: #676a6c;
+    padding-top: 10px;
+}
+
+#nav-header ul a{
+    text-decoration: none;
+}
+
+#welcome-message{
+    margin-right: 20px;
+}
+
+#geek-footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    background-color: #fff;
+    padding: 10px;
+    font-size: 12px;
+    color: #676a6c;
+}
+
+
+.navbar-default{
+    background-color: #fff;
+}
+
+.profile-info{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0px;
+}
+
+.image-feed {
+    width: 100px;
+    height: 100px;
+}

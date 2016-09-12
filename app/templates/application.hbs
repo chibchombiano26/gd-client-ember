@@ -1,10 +1,82 @@
-{{user-info}}
 
-<header>
-  {{#if session.isAuthenticated}}
-    <h3>You are currently logged as: {{session.data.authenticated.profile.email}}</h3>
-    <a href="#" {{action 'logout'}}>Logout</a>
-  {{/if}}
-</header>
-
-{{outlet}}
+<div class="container-fluid col-md-12 col-xs-12 col-sm-12 display-table">
+  
+  <div class="row display-table-row">
+    <div class="hidden-xs col-md-2 col-sm-1 display-table-cell valign-top" id="side-menu">
+      <h1 class="hidden-xs hidden-sm">
+        geek dev
+      </h1>
+      
+      <ul>
+        
+        <li class="link">
+          <a href="#" {{action 'gotoFeed'}}>
+            <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+            <span class="hidden-xs hidden-sm">feed</span>
+          </a>
+        </li>
+        
+        <li class="link">
+          <a href="#" {{action 'takeSnapShot'}}>
+            <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+            <span class="hidden-xs hidden-sm">snapshot</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+    </div>
+    <div class="col-md-10 col-sm-11 display-table-cell valign-top">
+      
+      <div class="row">
+        <header id="nav-header" class="clearfix">
+           <div class="col-md-6 col-md-offset-6">
+             
+             <nav class="navbar-default pull-left">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="offcanvas" data-target="#side-menu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+             </nav>
+             
+             
+             <ul class="pull-right">
+               <li class="hidden-xs profile-info">
+                 {{user-info}}
+               </li>
+               
+               <li>
+                 <a {{action 'login'}}>
+                   <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                   {{login-button}}
+                 </a>
+               </li>
+             </ul>
+           </div>
+        </header>
+      </div>
+      
+      <div>
+         {{outlet}}
+      </div>
+      
+      
+      <div class="row">
+        <footer id="geek-footer" class="clearfix">
+          <div class="pull-left">
+            <b>Copyright &copy; 2016</b>
+          </div>
+          <div class="pull-right">
+            <b>Geek developers test</b>
+          </div>
+        </footer>
+      </div>
+      
+     
+      
+    </div>
+  </div>
+  
+</div>
